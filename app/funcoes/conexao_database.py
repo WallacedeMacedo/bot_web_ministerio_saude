@@ -15,7 +15,7 @@ class ConexaoOracle:
     def truncate_table():
         sql = 'truncate table dev.ext_covid_py'
         try:
-            driver_conexao = cx_Oracle.connect(user='DEV', password='admin123', dsn='localhost,1521,XE')
+            driver_conexao = cx_Oracle.connect(user='usuario_banco_dados', password='senha_banco_dados', dsn='localhost,1521,XE')
             cursor = driver_conexao.cursor()
             cursor.execute(sql)
             driver_conexao.commit()
@@ -28,9 +28,9 @@ class ConexaoOracle:
     def inserir_dados(self):
         try:
             print('Início do carregamento na base de dados: ', datetime.today())
-            driver_conexao = cx_Oracle.connect(user='DEV', password='admin123', dsn='localhost,1521,XE')
+            driver_conexao = cx_Oracle.connect(user='usuario_banco_dados', password='senha_banco_dados', dsn='localhost,1521,XE')
             cursor = driver_conexao.cursor()
-            # print(self.sql_insert)
+            
             for sql in self.sql_insert:
                 # print(sql)
                 cursor.execute(sql)
