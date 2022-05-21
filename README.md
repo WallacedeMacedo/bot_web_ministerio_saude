@@ -12,7 +12,9 @@ Algumas bibliotecas são necessárias para execução e estão listadas no arqui
 
 Edite o arquivo conexao_database.py e informe os dados de acesso ao banco de dados ou crie algum arquivo de login e passe as credências de acesso ao banco.
 
-Após realizar o passo acima é preciso fazer o download do "Oracle Instant Client" de acordo com o seu sistema operacional, segue o link abaixo. 
+No arquivo controle.py informe seu diretório de Download para a variável diretorio_download.
+
+Após realizar o passo acima é preciso fazer o download do "Oracle Instant Client" de acordo com o seu sistema operacional, segue o link. 
 https://www.oracle.com/br/database/technologies/instant-client/downloads.html
 
 É importante passar o caminho/diretório do "Oracle Instant Client" em conexao_database.py e informe a tabela criada no banco de dados para ser carregada.
