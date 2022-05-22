@@ -14,7 +14,7 @@ import time
 
 def esperar_download():
 
-    data = (datetime.today() - timedelta(2)).strftime("%d%b%Y").lower()
+    data = (datetime.today() - timedelta(1)).strftime("%d%b%Y").lower()
     arquivo_rar = 'HIST_PAINEL_COVIDBR_{}.rar'.format(data)
     arquivo_zip = 'HIST_PAINEL_COVIDBR_{}.zip'.format(data)
     arquivo_7z = 'HIST_PAINEL_COVIDBR_{}.7z'.format(data)

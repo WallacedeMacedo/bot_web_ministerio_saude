@@ -11,7 +11,7 @@ class Data:
 
     def data_ontem(self):
         # Formato da Data. Ex: 20nov2021
-        ontem = self.dt_hoje - timedelta(2)
+        ontem = self.dt_hoje - timedelta(1)
         dt_ontem = ontem.strftime("%d%b%Y").lower()
         return dt_ontem
 
