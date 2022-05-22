@@ -23,7 +23,7 @@ Após baixar e extrair o instantclient, cole dentro do diretório APP do projeto
 
 4º Passo
 Abra o editor de texto ou IDE, de sua preferência, e alterar o arquivo conexao_database.py e informe para cx_Oracle.init_oracle_client() o caminho da biblioteca.
-ex: cx_Oracle.init_oracle_client(lib_dir=r"app\instantclient_19_9")
+ex: cx_Oracle.init_oracle_client(lib_dir=os.getcwd() + "\\app\\instantclient_19_9\\")
 
 Após informe as credênciais de acesso ao banco de dados ou crie algum arquivo de login e passe as credências.
 user='usuario_banco_dados', 
