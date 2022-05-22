@@ -6,15 +6,32 @@ Este Bot foi desenvolvido para baixar o arquivo compactado(rar, zip e 7z) no sit
 Após o download o arquivo é movido do diretório Download para o diretório arquivos/compactados dentro do projeto, em seguida os arquivos são extraidos no 
 diretório arquivos/extraidos e carregados no banco de dados oracle.
 
-Antes de executar o projeto é preciso seguir os passos abaixo.
+# Antes de executar o projeto é preciso seguir os passos abaixo.
 
-Algumas bibliotecas são necessárias para execução e estão listadas no arquivo requirements.txt.
+Após baixar o projeto no github é preciso seguir os passos abaixo.
 
-Edite o arquivo conexao_database.py e informe os dados de acesso ao banco de dados ou crie algum arquivo de login e passe as credências de acesso ao banco.
+1º Passo
+Instale o cx_Oracle:
+python -m pip install cx_Oracle --upgrade --user
 
-No arquivo controle.py informe seu diretório de Download para a variável diretorio_download.
+2º Passo
+As bibliotecas do Oracle Client precisam ser instaladas separadamente. Escolha de acordo com a versão do seu banco de dados.
+https://www.oracle.com/br/database/technologies/instant-client/winx64-64-downloads.html
 
-Após realizar o passo acima é preciso fazer o download do "Oracle Instant Client" de acordo com o seu sistema operacional, segue o link. 
-https://www.oracle.com/br/database/technologies/instant-client/downloads.html
+3º Passo
+Após baixar e extrair o instantclient, cole dentro do diretório APP do projeto.
 
-É importante passar o caminho/diretório do "Oracle Instant Client" em conexao_database.py e informe a tabela criada no banco de dados para ser carregada.
+4º Passo
+Abra o editor de texto ou IDE, de sua preferência, e alterar o arquivo conexao_database.py e informe para cx_Oracle.init_oracle_client() o caminho da biblioteca.
+ex: cx_Oracle.init_oracle_client(lib_dir=r"app\instantclient_19_9")
+
+Após informe as credênciais de acesso ao banco de dados ou crie algum arquivo de login e passe as credências.
+user='usuario_banco_dados', 
+password='senha_banco_dados', 
+dsn='localhost,1521,XE'
+
+5º Passo
+No arquivo controle.py informe o seu diretório de Download para a variável diretorio_download.
+
+
+Outras bibliotecas que são necessárias para execução estão listadas no arquivo requirements.txt.
