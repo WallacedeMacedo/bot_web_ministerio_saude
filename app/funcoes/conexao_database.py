@@ -1,7 +1,8 @@
 import cx_Oracle
+import os
 from datetime import datetime
 
-cx_Oracle.init_oracle_client(lib_dir=r"app\instantclient_19_9")
+cx_Oracle.init_oracle_client(lib_dir=os.getcwd() + "\\app\\instantclient_19_9\\")
 # cx_Oracle.init_oracle_client(lib_dir=r"D:\oraclexe\instantclient_19_9")
 # É preciso informar o caminho do "Oracle Instant Client" na sua máquina.
 
