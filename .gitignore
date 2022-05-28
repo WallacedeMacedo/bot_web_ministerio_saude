@@ -4,7 +4,7 @@ app/__pycache__
 app/__pycache__
 app/bot/__pycache__
 app/funcoes/__pycache__
-app/arquivos/extraidos/HIST_PAINEL_COVIDBR_2020_Parte1_16mai2022.csv app/arquivos/extraidos/HIST_PAINEL_COVIDBR_2020_Parte2_16mai2022.csv app/arquivos/extraidos/HIST_PAINEL_COVIDBR_2021_Parte1_16mai2022.csv app/arquivos/extraidos/HIST_PAINEL_COVIDBR_2021_Parte2_16mai2022.csv app/arquivos/extraidos/HIST_PAINEL_COVIDBR_2022_Parte1_16mai2022.csv
-app/arquivos/compactados/HIST_PAINEL_COVIDBR_16mai2022.rar
+app/arquivos/extraidos/*.csv
+app/arquivos/compactados/*.rar
 app/arquivos/compactados/*.zip
 app/arquivos/compactados/*.7z
