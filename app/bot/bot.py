@@ -13,20 +13,22 @@ import time
 
 
 def esperar_download():
-
     data = (datetime.today() - timedelta(1)).strftime("%d%b%Y").lower()
-    arquivo_rar = 'HIST_PAINEL_COVIDBR_{}.rar'.format(data)
-    arquivo_zip = 'HIST_PAINEL_COVIDBR_{}.zip'.format(data)
-    arquivo_7z = 'HIST_PAINEL_COVIDBR_{}.7z'.format(data)
-    caminho = "C:\\Users\\Wallace\\Downloads\\"
+    caminho = "C:\\Users\\Wallace\\Downloads"
+    arquivo = 'HIST_PAINEL_COVIDBR_{}'.format(data)
+    caminho_arquivo = os.path.join(caminho, arquivo)
+
     print('Aguarde o Download do arquivo.')
-    #
-    while not os.path.exists(os.path.join(caminho, arquivo_rar) or os.path.join(caminho, arquivo_zip)
-                             or os.path.join(caminho, arquivo_7z)):
+    while True:
+        # print(not os.path.exists(caminho_arquivo+'.rar')) True
+        # print(os.path.exists(caminho_arquivo + '.rar')) False
+        if os.path.exists(caminho_arquivo+'.rar') or os.path.exists(caminho_arquivo+'.zip') \
+                or os.path.exists(caminho_arquivo+'.7z'):
+            break
         time.sleep(1)
 
-    if os.path.isfile(os.path.join(caminho, arquivo_rar) or os.path.join(caminho, arquivo_zip)
-                      or os.path.join(caminho, arquivo_7z)):
+    if os.path.isfile(caminho_arquivo+'.rar') or os.path.isfile(caminho_arquivo+'.zip') \
+            or os.path.isfile(caminho_arquivo+'.7z'):
         print('Downlaod finalizado.')
     else:
         print('Arquivo não localizado no diretório.')

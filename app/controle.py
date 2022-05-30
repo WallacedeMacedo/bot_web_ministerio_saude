@@ -28,9 +28,9 @@ class Controle:
         if nova_lista != 0:
             tratamento = EstruturaSql(nova_lista)
             estrutura_montada = tratamento.montar_sql()  # retorna lista
-            dbOracle = ConexaoOracle(estrutura_montada)
-            dbOracle.truncate_table()
-            dbOracle.inserir_dados()
+            db_oracle = ConexaoOracle(estrutura_montada)
+            db_oracle.truncate_table()
+            db_oracle.inserir_dados()
             # print('BD Carregado.')
             print('Fim do processo: ', datetime.datetime.today())
 
