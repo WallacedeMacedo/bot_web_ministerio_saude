@@ -20,8 +20,6 @@ def esperar_download():
 
     print('Aguarde o Download do arquivo.')
     while True:
-        # print(not os.path.exists(caminho_arquivo+'.rar')) True
-        # print(os.path.exists(caminho_arquivo + '.rar')) False
         if os.path.exists(caminho_arquivo+'.rar') or os.path.exists(caminho_arquivo+'.zip') \
                 or os.path.exists(caminho_arquivo+'.7z'):
             break
